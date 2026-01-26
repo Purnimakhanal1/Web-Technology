@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Project Details</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f8;
+            text-align: center;
+        }
+        h2 {
+            color: #4b3e72;
+        }
+        .table {
+            width: 70%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
+        .row {
+            display: flex;
+        }
+        .header, .cell {
+            flex: 1;
+            padding: 12px 15px;
+            border: 1px solid #ccc;
+        }
+        .header {
+            background-color: #d8d3e8;
+            color: #333;
+            font-weight: bold;
+        }
+        .row:nth-child(odd) .cell {
+            background-color: #e6eafc; /* rows 1 and 3 same color */
+        }
+        .row:nth-child(even) .cell {
+            background-color: #ffffff; /* row 2 different color */
+        }
+    </style>
+</head>
+<body>
+    <h2>Student Project Details</h2>
+
+    <div class="table">
+        <!-- Header Row -->
+        <div class="row">
+            <div class="header">S.N</div>
+            <div class="header">Project Name</div>
+            <div class="header">Student Name</div>
+            <div class="header">Exam Roll No</div>
+            <div class="header">Remarks</div>
+        </div>
+
+        <!-- Data Rows -->
+        <div class="row">
+            <div class="cell">1</div>
+            <div class="cell">Online Quiz System</div>
+            <div class="cell">Susmita Bhujel</div>
+            <div class="cell">80117725</div>
+            <div class="cell">Very good</div>
+        </div>
+
+        <div class="row">
+            <div class="cell">2</div>
+            <div class="cell">Library Management System</div>
+            <div class="cell">Suvekshya Jha</div>
+            <div class="cell">80117726</div>
+            <div class="cell">Good</div>
+        </div>
+
+        <div class="row">
+            <div class="cell">3</div>
+            <div class="cell">Student Result System</div>
+            <div class="cell">Purnima Khanal</div>
+            <div class="cell">80117727</div>
+            <div class="cell">Very good</div>
+        </div>
+    </div>
+
+</body>
+</html>

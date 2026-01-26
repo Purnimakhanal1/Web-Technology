@@ -1,0 +1,88 @@
+/* Reset default styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Navigation Bar */
+.nav {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    background-color: #ff6f61; /* Keep nav color same */
+    color: white;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+/* Main container using flexbox */
+.main-container {
+    display: flex; /* ensures left ad, products, right ad side by side */
+    justify-content: space-between;
+    gap: 20px; /* space between columns */
+    padding: 0 20px;
+}
+
+/* Advertisement sections */
+.ad-left, .ad-right {
+    width: 15%; /* 15% width for ads */
+    background-color: #E6E6FA; /* Lavender color */
+    color: #4B0082; /* Darker text for contrast */
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/* Products section */
+.products {
+    width: 70%; /* 70% width for center products */
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
+    gap: 15px;
+}
+
+/* Product boxes */
+.product {
+    background-color: #8B4513; /* Brown color */
+    color: white;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: transform 0.3s, background-color 0.3s;
+    cursor: pointer;
+}
+
+/* Hover effect */
+.product:hover {
+    background-color: #A0522D; /* Slightly lighter brown on hover */
+    transform: translateY(-5px);
+}
+
+/* Responsive */
+@media screen and (max-width: 900px) {
+    .main-container {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .ad-left, .ad-right, .products {
+        width: 100%;
+    }
+
+    .products {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .products {
+        grid-template-columns: 1fr;
+    }
+}
